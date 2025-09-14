@@ -49,7 +49,7 @@ class DoctoraliaPhoneExtractor:
             logger.info(f"Using proxy: {self.proxy_address}")
         
         # Uncomment the line below to run headless (without opening browser window)
-        # chrome_options.add_argument("--headless")
+        chrome_options.add_argument("--headless")
         
         try:
             self.driver = webdriver.Chrome(options=chrome_options)
@@ -340,7 +340,7 @@ def main():
     """Main function to run the phone extractor"""
     
     # Configuration
-    EXCEL_FILE_PATH = r'C:\Users\askso\Desktop\Huzaifa\Doctoralia\doctoralia-guadalajara.xlsx'  # Update with your Excel file path
+    EXCEL_FILE_PATH = "/home/ubuntu/doctoralia-sidetowns/doctoralia-sidetowns.xlsx"  # Update with your Excel file path
     USE_PROXY = False  # Set to True if you need to use a Mexican proxy
     PROXY_ADDRESS = "proxy_ip:proxy_port"  # Update with actual proxy if needed
     START_ROW = 2  # Start from row 2 (assuming row 1 has headers)
@@ -363,4 +363,5 @@ def main():
         logger.error(f"Main execution error: {e}")
 
 if __name__ == "__main__":
+
     main()
