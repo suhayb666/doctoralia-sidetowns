@@ -344,7 +344,7 @@ def main():
     USE_PROXY = False  # Set to True if you need to use a Mexican proxy
     PROXY_ADDRESS = "proxy_ip:proxy_port"  # Update with actual proxy if needed
     START_ROW = 2  # Start from row 2 (assuming row 1 has headers)
-    MAX_ROWS = 7000  # Process maximum 50 rows at a time (adjust as needed)
+    MAX_ROWS = 5500  # Process maximum 50 rows at a time (adjust as needed)
     
     # Create extractor instance
     extractor = DoctoraliaPhoneExtractor(
@@ -365,4 +365,5 @@ def main():
 if __name__ == "__main__":
 
     main()
+
 
